@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About the Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        .image-section img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+        .navbar-nav {
+        gap: 2rem;
+    }
+
+    /* Style links */
+    .nav-link {
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    /* Hover effect */
+    .nav-link:hover {
+        color: #007bff; /* Bootstrap primary color */
+    }
+
+    /* Hover underline effect */
+    .hover-underline {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #007bff; /* Matches hover color */
+        transition: width 0.3s ease-in-out;
+    }
+
+    .nav-link:hover .hover-underline {
+        width: 100%;
+    }
+
+    /* Add simple animation to active link */
+    .nav-link.active {
+        color: #007bff !important;
+        font-weight: bold;
+    }
+
+
+    </style>
+    <script>
+    // Add animation to active links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('mouseover', () => {
+            link.style.transform = 'scale(1.1)';
+        });
+        link.addEventListener('mouseout', () => {
+            link.style.transform = 'scale(1)';
+        });
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Popular Books Section -->
+    <nav class="navbar navbar-expand-lg ">
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+            <a class="nav-link text-secondary fw-bold position-relative" href="/" id="home-link">
+                Home
+                <span class="hover-underline"></span>
+            </a>
+        </li>
+        <li class="nav-item"><a class="nav-link text-secondary fw-bold position-relative" href="/search">Search book<span class="hover-underline"></span></a></li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary fw-bold position-relative" href="/about" id="about-link">
+                About Project
+                <span class="hover-underline"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+    </nav>
+ <section id="popular-books" class="section bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-bs-toggle="animation" data-bs-animation="fade-right">
+                <h2 class="fw-bold">Popular Books</h2>
+                <p class="text-muted">
+                    Here are some highlights about the popular books featured in this section:
+                </p>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle-fill text-dark me-2"></i> Created based on reviews and ratings.
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle-fill text-dark me-2"></i> Use IMDB's Formula that use for their recommendation.
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle-fill text-dark me-2"></i> It generates  Top 50 Popular books.
+                    </li>
+                    <li>
+                        <i class="bi bi-check-circle-fill text-dark me-2"></i> In Image provided formula and Explanation.
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 image-section" data-bs-toggle="animation" data-bs-animation="fade-left">
+                <img src="https://user-images.githubusercontent.com/36665975/70388481-6072fb80-19d8-11ea-9162-9fbbabd700ab.png" alt="Popular Books Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 image-section" data-bs-toggle="animation" data-bs-animation="fade-right">
+                    <img src="https://almablog-media.s3.ap-south-1.amazonaws.com/Recommendation_71631ba553.png
+" alt="Recommendations Image">
+                </div>
+                <div class="col-md-6" data-bs-toggle="animation" data-bs-animation="fade-left">
+                    <h2 class="fw-bold">Recommendations</h2>
+                    <p class="text-muted">
+                        This recommendation engine helps you discover books tailored to your preferences. By analyzing user ratings, same authors, we bring you personalized suggestions. Dive into a world of books curated just for you!
+                    </p>
+                    <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle-fill text-black me-2"></i> Use Collaborative filtering recommendation.
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle-fill text-black me-2"></i> Recommendations for different genres.
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle-fill text-black me-2"></i> Suggests books from your Search books.
+                    </li>
+                    <li>
+                        <i class="bi bi-check-circle-fill text-black me-2"></i> Keeps track of your reading habits.
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Animations -->
+    <script>
+    document.querySelectorAll("[data-bs-toggle='animation']").forEach(el => {
+        const animation = el.getAttribute("data-bs-animation");
+        el.style.opacity = "0";
+        el.style.transition = "opacity 1s, transform 1s";
+        el.style.transform = "translateY(50px)";
+
+        const triggerAnimation = () => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                el.style.opacity = "1";
+                el.style.transform = "translateY(0)";
+            }
+        };
+
+        // Trigger animation on page load
+        triggerAnimation();
+
+        // Trigger animation on scroll
+        window.addEventListener("scroll", triggerAnimation);
+    });
+</script>
+
+</body>
+</html>
